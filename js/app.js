@@ -11,63 +11,229 @@ console.log('hello world');
 //1. get element to modify
 
 
-let hours = ['6am', '7am', '8am', '9am','10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm','6pm', '7pm']
+let section = document.getElementById('cookies-city-sales');
 
-// let section = document.getElementById('cookies-city-sales');
+console.log(section);
 
-// console.log(section);
+let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
 //Objects for each cities sales with min and max and average
 
-let seattle = {
-  min: 23,
-  max: 65,
-  avg: 6.3,
-  sales: 0,
-  getSales: function () {
-    this.sales = getRandom(this.min, this.max);
-    console.log(this.sales);
+// Seattle Render function that adds the list items to the sales.html for the ul id:seattle.
+function seattleRender() {
+
+  let seattle = {
+    city: 'seattle',
+    min: 23,
+    max: 65,
+    avg: 6.3,
+    sales: 0,
+    total: 0,
+
+    getSales: function () {
+      let randoNum = getRandom(this.min, this.max);
+      let avgSales = randoNum * this.avg;
+      let finalAvg = Math.ceil(avgSales);
+      // console.log(this.sales);
+      this.sales = finalAvg;
+    }
+  };
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    //The maximum is exclusive and the minimum is inclusive
   }
-};
+  let seattleList = document.getElementById(seattle.city);
 
-let tokyo = {
-  min: 3,
-  max: 24,
-  avg: 1.2,
-};
+  //Use for loop to iterate the hors add random sales multiplied by avg and added at each iteration to
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    seattle.getSales();
+    seattle.total = seattle.total + seattle.sales;
+    li.textContent = `${hours[i]} ${seattle.sales}`;
+    seattleList.appendChild(li);
 
-let dubai = {
-  min: 11,
-  max: 38,
-  avg: 2.3,
-};
+  }
 
-let paris = {
-  min: 20,
-  max: 38,
-  avg: 2.3,
-};
+  let li = document.createElement('li');
+  seattleList.appendChild(li);
+  li.textContent = `Total: ${seattle.total}`;
 
-let lima = {
-  min: 2,
-  max: 16,
-  avg: 4.6,
-};
-
-seattle.getSales();
-tokyo.min;
-dubai.min;
-paris.min;
-tokyo.min;
-lima.min;
-console.log(hours);
-
-
-//Helper function to generate random  number
-
-function getRandom(min, max){
-  return Math.floor(Math.random() * (max - min + 1) + min);
-  //The maximum is exclusive and the minimum is inclusive
 }
+
+seattleRender();
+
+// Tokyo Render function that adds the list items to the sales.html for the ul id:tokoyo.
+
+function tokyoRender() {
+
+  let tokyo = {
+    city: 'tokyo',
+    min: 3,
+    max: 24,
+    avg: 1.2,
+    sales: 0,
+    total: 0,
+
+
+    getSales: function () {
+      let randoNum = getRandom(this.min, this.max);
+      let avgSales = randoNum * this.avg;
+      let finalAvg = Math.ceil(avgSales);
+      // console.log(this.sales);
+      this.sales = finalAvg;
+    }
+  };
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    //The maximum is exclusive and the minimum is inclusive
+  }
+  let tokyoList = document.getElementById(tokyo.city);
+
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    tokyo.getSales();
+    tokyo.total = tokyo.total + tokyo.sales;
+    li.textContent = `${hours[i]} ${tokyo.sales}`;
+    tokyoList.appendChild(li);
+
+  }
+
+  let li = document.createElement('li');
+  tokyoList.appendChild(li);
+  li.textContent = `Total: ${tokyo.total}`;
+}
+
+tokyoRender();
+
+
+// Dubai Render function that adds the list items to the sales.html for the ul id:dubai.
+function dubaiRender() {
+
+  let dubai = {
+    city: 'dubai',
+    min: 11,
+    max: 38,
+    avg: 2.3,
+    sales: 0,
+    total: 0,
+
+    getSales: function () {
+      let randoNum = getRandom(this.min, this.max);
+      let avgSales = randoNum * this.avg;
+      let finalAvg = Math.ceil(avgSales);
+      // console.log(this.sales);
+      this.sales = finalAvg;
+    }
+  };
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    //The maximum is exclusive and the minimum is inclusive
+  }
+  let dubaiList = document.getElementById(dubai.city);
+
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    dubai.getSales();
+    dubai.total = dubai.total + dubai.sales;
+    li.textContent = `${hours[i]} ${dubai.sales}`;
+    dubaiList.appendChild(li);
+
+  }
+
+  let li = document.createElement('li');
+  dubaiList.appendChild(li);
+  li.textContent = `Total: ${dubai.total}`;
+
+}
+
+dubaiRender();
+
+// Paris Render function that adds the list items to the sales.html for the ul id:paris.
+function parisRender() {
+
+  let paris = {
+    city: 'paris',
+    min: 20,
+    max: 38,
+    avg: 2.3,
+    sales: 0,
+    total: 0,
+
+    getSales: function () {
+      let randoNum = getRandom(this.min, this.max);
+      let avgSales = randoNum * this.avg;
+      let finalAvg = Math.ceil(avgSales);
+      // console.log(this.sales);
+      this.sales = finalAvg;
+    }
+  };
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    //The maximum is exclusive and the minimum is inclusive
+  }
+  let parisList = document.getElementById(paris.city);
+
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    paris.getSales();
+    paris.total = paris.total + paris.sales;
+    li.textContent = `${hours[i]} ${paris.sales}`;
+    parisList.appendChild(li);
+
+  }
+
+  let li = document.createElement('li');
+  parisList.appendChild(li);
+  li.textContent = `Total: ${paris.total}`;
+}
+
+parisRender();
+
+
+// Paris Render function that adds the list items to the sales.html for the ul id:paris.
+function limaRender() {
+
+  let lima = {
+    city: 'lima',
+    min: 2,
+    max: 16,
+    avg: 4.6,
+    sales: 0,
+    total: 0,
+
+    getSales: function () {
+      let randoNum = getRandom(this.min, this.max);
+      let avgSales = randoNum * this.avg;
+      let finalAvg = Math.ceil(avgSales);
+      // console.log(this.sales);
+      this.sales = finalAvg;
+    }
+  };
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+    //The maximum is exclusive and the minimum is inclusive
+  }
+  let limaList = document.getElementById(lima.city);
+
+  for (let i = 0; i < hours.length; i++) {
+    let li = document.createElement('li');
+    lima.getSales();
+    lima.total = lima.total + lima.sales;
+    li.textContent = `${hours[i]} ${lima.sales}`;
+    limaList.appendChild(li);
+
+  }
+
+  let li = document.createElement('li');
+  limaList.appendChild(li);
+  li.textContent = `Total: ${lima.total}`;
+}
+
+limaRender();
 
 
