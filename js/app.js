@@ -58,6 +58,8 @@ function seattleRender() {
   let li = document.createElement('li');
   seattleList.appendChild(li);
   li.textContent = `Total: ${seattle.total}`;
+  //Returning total to a seperate array
+  return [seattle.total];
 
 }
 
@@ -90,7 +92,7 @@ function tokyoRender() {
     //The maximum is exclusive and the minimum is inclusive
   }
   let tokyoList = document.getElementById(tokyo.city);
-
+  //Use for loop to iterate the hors add random sales multiplied by avg and added at each iteration to
   for (let i = 0; i < hours.length; i++) {
     let li = document.createElement('li');
     tokyo.getSales();
@@ -103,6 +105,8 @@ function tokyoRender() {
   let li = document.createElement('li');
   tokyoList.appendChild(li);
   li.textContent = `Total: ${tokyo.total}`;
+  //Returning total to a serperate array
+  return [tokyo.total];
 }
 
 tokyoRender();
@@ -115,7 +119,7 @@ function dubaiRender() {
     city: 'dubai',
     min: 11,
     max: 38,
-    avg: 2.3,
+    avg: 3.7,
     sales: 0,
     total: 0,
 
@@ -133,7 +137,7 @@ function dubaiRender() {
     //The maximum is exclusive and the minimum is inclusive
   }
   let dubaiList = document.getElementById(dubai.city);
-
+  //Use for loop to iterate the hors add random sales multiplied by avg and added at each iteration to
   for (let i = 0; i < hours.length; i++) {
     let li = document.createElement('li');
     dubai.getSales();
@@ -146,6 +150,8 @@ function dubaiRender() {
   let li = document.createElement('li');
   dubaiList.appendChild(li);
   li.textContent = `Total: ${dubai.total}`;
+  //Returning total to a seperate array
+  return [dubai.total];
 
 }
 
@@ -176,7 +182,7 @@ function parisRender() {
     //The maximum is exclusive and the minimum is inclusive
   }
   let parisList = document.getElementById(paris.city);
-
+  //Use for loop to iterate the hors add random sales multiplied by avg and added at each iteration to
   for (let i = 0; i < hours.length; i++) {
     let li = document.createElement('li');
     paris.getSales();
@@ -189,6 +195,8 @@ function parisRender() {
   let li = document.createElement('li');
   parisList.appendChild(li);
   li.textContent = `Total: ${paris.total}`;
+  //Returning total to a seperate array
+  return [paris.total];
 }
 
 parisRender();
@@ -219,7 +227,7 @@ function limaRender() {
     //The maximum is exclusive and the minimum is inclusive
   }
   let limaList = document.getElementById(lima.city);
-
+  //Use for loop to iterate the hors add random sales multiplied by avg and added at each iteration to
   for (let i = 0; i < hours.length; i++) {
     let li = document.createElement('li');
     lima.getSales();
@@ -232,6 +240,8 @@ function limaRender() {
   let li = document.createElement('li');
   limaList.appendChild(li);
   li.textContent = `Total: ${lima.total}`;
+  //Returning total to a seperate array
+  return [lima.total];
 }
 
 limaRender();
