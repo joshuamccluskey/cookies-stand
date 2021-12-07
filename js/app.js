@@ -50,7 +50,7 @@ function seattleRender() {
     let li = document.createElement('li');
     seattle.getSales();
     seattle.total = seattle.total + seattle.sales;
-    li.textContent = `${hours[i]} ${seattle.sales}`;
+    li.textContent = `${hours[i]} ${seattle.sales} cookies`;
     seattleList.appendChild(li);
 
   }
@@ -97,7 +97,7 @@ function tokyoRender() {
     let li = document.createElement('li');
     tokyo.getSales();
     tokyo.total = tokyo.total + tokyo.sales;
-    li.textContent = `${hours[i]} ${tokyo.sales}`;
+    li.textContent = `${hours[i]} ${tokyo.sales} cookies`;
     tokyoList.appendChild(li);
 
   }
@@ -142,7 +142,7 @@ function dubaiRender() {
     let li = document.createElement('li');
     dubai.getSales();
     dubai.total = dubai.total + dubai.sales;
-    li.textContent = `${hours[i]} ${dubai.sales}`;
+    li.textContent = `${hours[i]} ${dubai.sales} cookies`;
     dubaiList.appendChild(li);
 
   }
@@ -187,7 +187,7 @@ function parisRender() {
     let li = document.createElement('li');
     paris.getSales();
     paris.total = paris.total + paris.sales;
-    li.textContent = `${hours[i]} ${paris.sales}`;
+    li.textContent = `${hours[i]} ${paris.sales} cookies`;
     parisList.appendChild(li);
 
   }
@@ -232,7 +232,7 @@ function limaRender() {
     let li = document.createElement('li');
     lima.getSales();
     lima.total = lima.total + lima.sales;
-    li.textContent = `${hours[i]} ${lima.sales}`;
+    li.textContent = `${hours[i]} ${lima.sales} cookies`;
     limaList.appendChild(li);
 
   }
