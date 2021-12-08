@@ -107,11 +107,13 @@ Create a low-fidelity wireframe of what you want the page to look like.
 
 Create a high-fidelity wireframe of what you want your page to look like.
 
-Author: Joshua McCluskey
-Links and Resources: N/A
-submission PR:
-Any Links you used as reference
-Reflections and Comments:
+### Author: Joshua McCluskey
+
+#### Links and Resources: N/A
+
+#### submission PR:
+
+### Reflections and Comments:
 
 At first I thought this was going to be fast, but after realizing elements had to be added to the sales.html, it got nuanced very quickly. There were a lot of small steps that needed to be accomplished to complete each task. It took me the whole lab for me to complete the requirements. Speaking out loud when you are stuck, really does work so I need to find a rubber ducky to talk to whole I typing and thinking.
 
@@ -130,10 +132,55 @@ Replace the lists of your data for each store and build a single table of data i
 Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
 
 
-Author: Joshua McCluskey
-Links and Resources: N/A
-submission PR:
-Any Links you used as reference
-Reflections and Comments:
+### Author: Joshua McCluskey
+
+### Links and Resources: N/A
+
+### submission PR:
+
+
+### Reflections and Comments:
 
 I felt like this was the toughest lab to figure out out of all the labs so far in 201. I hit several points where my brain had hit its point, and I kept trying to push through. I now appreciate any dynamic table that I may see from here on out. I thought that it would take as long as the build out in the class demonstration. Then I quickly realized if I was going to use the functions that I had already built that it would take longer to modify the code to work. I learned an invaluable amount during this exercise. This assignment took me the whole lab.
+
+## LAB - 08 CSS
+
+
+## Pat's Salmon Cookies
+
+ontinue working on the functionality of your sales.html page if you do not have it working 100% yet, including the row of totals across the bottom.
+
+Pat has provided you 7 additional images that they would like to see on the home page of the site. These images are located in your daily class GitHub repo: class-08/lab-b/assets/.
+
+Your public-facing index.html page should include the following:
+
+locations with addresses,
+hours open
+contact information
+Anything else you feel neccesary.
+A link to your sales.html page
+Be sure to also include a link to your index.html page on your sales.html pages as well.
+Feel free to make this information up. Get creative, have fun, but remember to be professional.
+
+Stretch Goals
+Add the ability for your users to choose among multiple display or color profiles for the page. Clicking a button should allow them to choose (for instance) whether the text is dark on a light background, or the text is light on a dark background. You can also experiment with changing up the style: make a version of your display that mimics a newspaper, or an Excel spreadsheet, or Roman chiseling in stone. (But make sure the user can choose a more normal style, too!) You can also experiment with using a select input to choose the style.
+
+Make a style guide, using this one that a team Brian was on made for Everlast as a model.
+
+Make two additional pages:
+
+Mock up an order form that would be public facing (store.html) so that visitors to the website can order salmon cookies and swag. That form would need to receive all of the things you’d expect on an order form: name, address, payment info, products to order, quantities, special instructions, and so on.
+A second ‘private’ page (order-processing.html) that shows a list of pending orders and the individual order details. The business owner can then process the orders by clicking a button next to the order that then moves that list item to a ‘Filled Orders’ list at the bottom of the page.
+
+
+### Author: Joshua McCluskey
+
+### Links and Resources:
+
+[Google Fonts](<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bungee+Outline&display=swap" rel="stylesheet">)
+
+### submission PR:
+
+Reflections and Comments:
+
+This lab went very fast considering the amount of work that needed to be done. It helped to have the wireframe ready to use from the first part of the lab. Then it was pretty much modifying the page to fit the website. It took some adjustments to stop overlapping and then it all came togeter working section by section. Overall, it was a solid lab. A ton of time can be spent on styling, I need to catch myself in the future from spending too much time in the grand scheme of the course and other features of the website that require more time and mental resources.
