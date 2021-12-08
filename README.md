@@ -113,6 +113,27 @@ submission PR:
 Any Links you used as reference
 Reflections and Comments:
 
-Consider including the answers to your daily journal and submission questions here
+At first I thought this was going to be fast, but after realizing elements had to be added to the sales.html, it got nuanced very quickly. There were a lot of small steps that needed to be accomplished to complete each task. It took me the whole lab for me to complete the requirements. Speaking out loud when you are stuck, really does work so I need to find a rubber ducky to talk to whole I typing and thinking.
 
-This is also a good place to reflect on the tools and resources used and learned
+
+## LAB - 07 Add a constructor function to the cookie stand project
+
+
+## Pat's Salmon Cookies
+
+Create a new branch for today’s lab. Make sure it has all of your changes from lab 06 so that you can extend the functionality.
+
+Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the ‘new’ keyword, it creates a new instance.
+
+Replace the lists of your data for each store and build a single table of data instead. It should look similar to the following:
+
+Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
+
+
+Author: Joshua McCluskey
+Links and Resources: N/A
+submission PR:
+Any Links you used as reference
+Reflections and Comments:
+
+I felt like this was the toughest lab to figure out out of all the labs so far in 201. I hit several points where my brain had hit its point, and I kept trying to push through. I now appreciate any dynamic table that I may see from here on out. I thought that it would take as long as the build out in the class demonstration. Then I quickly realized if I was going to use the functions that I had already built that it would take longer to modify the code to work. I learned an invaluable amount during this exercise. This assignment took me the whole lab.
