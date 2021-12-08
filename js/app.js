@@ -21,6 +21,7 @@ function Stores(city, min, max, avg) {
   this.avg = avg;
   this.sales = 0;
   this.total = 0;
+  this.array = [];
 
 }
 
@@ -53,12 +54,20 @@ Stores.prototype.render = function () {
 
   for (let i = 0; i < hours.length; i++) {
     this.getSales();
+    this.array = [this.sales];
     this.total = this.total + this.sales;
     td = document.createElement('td');
     td.textContent = `${this.sales}`;
     tr.appendChild(td);
   }
-
+  
+  // for (let i = 0; i < hours.length; i++) {
+  //   this.getSales();
+  //   this.total = this.total + this.sales;
+  //   td = document.createElement('td');
+  //   td.textContent = `${this.sales}`;
+  //   tr.appendChild(td);
+  // }
   td = document.createElement('td');
   td.textContent = this.total;
   tr.appendChild(td);
