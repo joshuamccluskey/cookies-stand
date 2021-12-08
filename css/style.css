@@ -5,3 +5,12 @@
 ul{
   list-style: inside;
 }
+
+table{
+ border: 1px solid black;
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 10px;
+}
