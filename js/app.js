@@ -87,6 +87,18 @@ function renderHeader() {
 
 }
 
+function renderFooter() {
+  let table = document.getElementById('cookieSales');
+  let tr = document.createElement('tr');
+  table.appendChild(tr);
+  let tfoot = document.createElement('tfoot');
+  tr.appendChild(tfoot);
+  let td = document.createElement('td');
+  td.textContent = 'Totals';
+  tfoot.appendChild(td);
+
+}
+
 //creating a new objects for each store with their values for consturctor function
 let seattle = new Stores('Seattle', 23, 65, 6.3);
 let tokyo = new Stores('Tokyo', 3, 24, 1.2);
@@ -101,6 +113,7 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+renderFooter();
 
 
 //For refernce of the vales for each store
@@ -146,4 +159,3 @@ lima.render();
 //     avg: 4.6,
 //     sales: 0,
 //     total: 0,
-
