@@ -28,12 +28,12 @@
   </main>
 
   <section id="form">
-    <form action="">
+    <form id="sales-form">
       <fieldset>
         <legend>Submit New Store Cookies Sales </legend>
         <div>
         <label for="city"> City:</label>
-        <input type="text" name="city" id="city" required="required">
+        <input type="text" name="city" id="city" placeholder="Type Ex: London" required="required">
         </div>
         <div>
         <label for="min"> Minimum Daily Customer:</label>
@@ -45,10 +45,10 @@
         <div>
         </div>
         <label for="avg"> Average Cookies Per Sale:</label>
-        <input type="number" name="avg" id="avg" required="required">
+        <input type="number" name="avg" id="avg" step="any" min="1" max="50" placeholder="Ex: 8.8"required="required">
         <div>
         </div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
         </div>
       </fieldset>
     </form>

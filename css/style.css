@@ -168,6 +168,22 @@ legend{
   
 }
 
+button {
+  margin-left: 30px;
+  background-color: #111;
+  display: inline-block;
+  color: #aaa;
+  padding: 10px 30px;
+  margin-top: 5px;
+  border-radius: 8px;
+}
+button:hover {
+  background-color: #aaa;
+  transition: 350ms;
+  color: black;
+  border-radius: 8px;
+}
+
 
 footer {
   background-color: #444;

@@ -134,6 +134,33 @@ let dubai = new Stores('Dubai', 11, 38, 3.7);
 let paris = new Stores('Paris', 20, 38, 2.3);
 let lima = new Stores('Lima', 2, 16, 4.6);
 
+
+// Form functions
+// Ger form from DOM
+let salesForm = document.getElementById('sales-form');
+
+//function for event submit trigger
+
+function handleSubmit(event){
+  event.preventDefault();
+
+  let city = event.target.city.value;
+  let min = +event.target.min.value;
+  let max = +event.target.max.value;
+  let avg = +event.target.avg.value;
+
+  console.log(city);
+  console.log(min);
+  console.log(max);
+  console.log(avg);
+
+}
+
+
+//Add listener for for submit
+
+salesForm.addEventListener('submit', handleSubmit);
+
 //Invoking all fucntions needed for solution
 renderHeader();
 seattle.render();
@@ -143,6 +170,7 @@ paris.render();
 lima.render();
 renderFooter();
 getHourlyTotals();
+
 
 
 
