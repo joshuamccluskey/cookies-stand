@@ -93,40 +93,6 @@ function renderHeader() {
 
 }
 
-function renderFooter() {
-  let table = document.getElementById('cookieSales');
-  let tr = document.createElement('tr');
-  table.appendChild(tr);
-  let tfoot = document.createElement('tfoot');
-  tr.appendChild(tfoot);
-  let td = document.createElement('td');
-  td.textContent = 'Totals';
-  tfoot.appendChild(td);
-
-  for (let i =0; i < hours.length; i++){
-    td = document.createElement('td');
-    td.textContent = parseInt(`${+hourlyTotalsArr[i]}`);
-    tr.appendChild(td);
-  }
-
-}
-
-function getHourlyTotals () {
-
-  for (let i = 0; i < hours.length; i++){
-    let total = 0;
-    for (let j =0; j < allStoresArr.length; j++){
-      total += allStoresArr[j].array[i];
-    }
-
-    hourlyTotalsArr.push(total);
-    grandTotal += total;
-  }
-  console.log(hourlyTotalsArr);
-  hourlyTotalsArr.push(grandTotal);
-}
-
-
 //creating a new objects for each store with their values for consturctor function
 let seattle = new Stores('Seattle', 23, 65, 6.3);
 let tokyo = new Stores('Tokyo', 3, 24, 1.2);
@@ -135,13 +101,24 @@ let paris = new Stores('Paris', 20, 38, 2.3);
 let lima = new Stores('Lima', 2, 16, 4.6);
 
 
+
+
+//Invoking all fucntions needed for solution
+renderHeader();
+seattle.render();
+tokyo.render();
+dubai.render();
+paris.render();
+lima.render();
+
+
 // Form functions
 // Ger form from DOM
 let salesForm = document.getElementById('sales-form');
 
 //function for event submit trigger
 
-function handleSubmit(event){
+function handleSubmit(event) {
   event.preventDefault();
 
   let city = event.target.city.value;
@@ -154,6 +131,11 @@ function handleSubmit(event){
   console.log(max);
   console.log(avg);
 
+  const newStore = new Stores(city, min, max, avg);
+
+  newStore.getSales();
+  newStore.render();
+
 }
 
 
@@ -161,21 +143,47 @@ function handleSubmit(event){
 
 salesForm.addEventListener('submit', handleSubmit);
 
-//Invoking all fucntions needed for solution
-renderHeader();
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
+//Const variable to render our new city
+
+
+salesForm.reset();
+
+
+function renderFooter() {
+  let table = document.getElementById('cookieSales');
+  let tr = document.createElement('tr');
+  table.appendChild(tr);
+  let tfoot = document.createElement('tfoot');
+  tr.appendChild(tfoot);
+  let td = document.createElement('td');
+  td.textContent = 'Totals';
+  tfoot.appendChild(td);
+
+  for (let i = 0; i < hours.length; i++) {
+    td = document.createElement('td');
+    td.textContent = parseInt(`${+hourlyTotalsArr[i]}`);
+    tr.appendChild(td);
+  }
+
+}
+
+function getHourlyTotals() {
+
+  for (let i = 0; i < hours.length; i++) {
+    let total = 0;
+    for (let j = 0; j < allStoresArr.length; j++) {
+      total += allStoresArr[j].array[i];
+    }
+
+    hourlyTotalsArr.push(total);
+    grandTotal += total;
+  }
+  console.log(hourlyTotalsArr);
+  hourlyTotalsArr.push(grandTotal);
+}
+
 renderFooter();
 getHourlyTotals();
-
-
-
-
-
-
 
 //For refernce of the vales for each store
 // function seattleRender() {
