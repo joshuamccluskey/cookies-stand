@@ -31,9 +31,7 @@ Stores.prototype.getSales = function () {
   let randoNum = getRandom(this.min, this.max);
   let avgSales = randoNum * this.avg;
   let finalAvg = Math.ceil(avgSales);
-  let hourlySalesArr= [];
   this.sales = finalAvg;
-  return [];
 };
 
 // Random number generator functino used in getSales method
@@ -54,7 +52,7 @@ Stores.prototype.render = function () {
 
   for (let i = 0; i < hours.length; i++) {
     this.getSales();
-    this.array = [this.sales];
+    this.array.push(this.sales);
     this.total = this.total + this.sales;
     td = document.createElement('td');
     td.textContent = `${this.sales}`;
