@@ -140,6 +140,35 @@ main div:hover {
   color: red;
 
 }
+
+form{
+  width: 300px;
+  height: 400px;
+  text-align: center;
+  display: block;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+fieldset {
+  width: 380px;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: right;
+
+}
+legend{
+  background-color: aquamarine;
+  border: 2px solid #333;
+  border-radius: 15px;
+  padding 15px 25px;
+  text-align: center;
+  
+}
+
+
 footer {
   background-color: #444;
   height: 125px;
