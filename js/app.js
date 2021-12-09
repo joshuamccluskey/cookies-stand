@@ -31,7 +31,7 @@ Stores.prototype.getSales = function () {
   let randoNum = getRandom(this.min, this.max);
   let avgSales = randoNum * this.avg;
   let finalAvg = Math.ceil(avgSales);
-  // console.log(this.sales);
+  let hourlySalesArr= [];
   this.sales = finalAvg;
   return [];
 };
@@ -60,7 +60,7 @@ Stores.prototype.render = function () {
     td.textContent = `${this.sales}`;
     tr.appendChild(td);
   }
-  
+
   // for (let i = 0; i < hours.length; i++) {
   //   this.getSales();
   //   this.total = this.total + this.sales;
