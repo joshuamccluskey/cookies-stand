@@ -45,36 +45,13 @@ function getRandom(min, max) {
   //The maximum is exclusive and the minimum is inclusive
 }
 
-//Render table into webpage and also calculates the totals for each store location.
-Stores.prototype.render = function () {
-  let table = document.getElementById('cookieSales');
-  let tr = document.createElement('tr');
-  table.appendChild(tr);
-  let td = document.createElement('td');
-  td.textContent = this.city;
-  tr.appendChild(td);
-  // let tf = document.createElement('tf');
-
-  for (let i = 0; i < hours.length; i++) {
-    this.getSales();
-    this.array.push(this.sales);
-    this.total = this.total + this.sales;
-    td = document.createElement('td');
-    td.textContent = `${this.sales}`;
-    tr.appendChild(td);
-  }
-
-  td = document.createElement('td');
-  td.textContent = this.total;
-  tr.appendChild(td);
-};
-
-
 //Renders the header inforamtion with the hours array to
 function renderHeader() {
   let table = document.getElementById('cookieSales');
+  let thead = document.createElement('thead');
+  table.appendChild(thead);
   let tr = document.createElement('tr');
-  table.appendChild(tr);
+  thead.appendChild(tr);
   let th = document.createElement('th');
   th.textContent = '';
   tr.appendChild(th);
@@ -92,6 +69,34 @@ function renderHeader() {
   tr.appendChild(th);
 
 }
+
+//Render table into webpage and also calculates the totals for each store location.
+Stores.prototype.render = function () {
+  let table = document.getElementById('cookieSales');
+  let tbody = document.createElement('tbody');
+  table.appendChild(tbody);
+  let tr = document.createElement('tr');
+  tbody.appendChild(tr);
+  let th = document.createElement('th');
+  th.textContent = this.city;
+  tr.appendChild(th);
+  let td =document.createElement('td');
+  // let tf = document.createElement('tf');
+
+  for (let i = 0; i < hours.length; i++) {
+    this.getSales();
+    this.array.push(this.sales);
+    this.total = this.total + this.sales;
+    td = document.createElement('td');
+    td.textContent = `${this.sales}`;
+    tr.appendChild(td);
+  }
+
+  td = document.createElement('td');
+  td.textContent = this.total;
+  tr.appendChild(td);
+};
+
 
 //creating a new objects for each store with their values for consturctor function
 let seattle = new Stores('Seattle', 23, 65, 6.3);
@@ -151,17 +156,17 @@ salesForm.reset();
 
 function renderFooter() {
   let table = document.getElementById('cookieSales');
+  let tfoot = document.createElement('tfoot')
+  table.appendChild(tfoot);
   let tr = document.createElement('tr');
-  table.appendChild(tr);
-  let tfoot = document.createElement('tfoot');
-  tr.appendChild(tfoot);
+  tfoot.appendChild(tr);
   let td = document.createElement('td');
   td.textContent = 'Totals';
-  tfoot.appendChild(td);
+  tr.appendChild(td);
 
   for (let i = 0; i < hours.length; i++) {
     td = document.createElement('td');
-    td.textContent = parseInt(`${+hourlyTotalsArr[i]}`);
+    td.textContent = parseInt(`${hourlyTotalsArr[i]}`);
     tr.appendChild(td);
   }
 
