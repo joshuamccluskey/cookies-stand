@@ -13,6 +13,10 @@
 //Hours array for the column heads
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
+let allStoresArr = [];
+let hourlyTotalsArr = [];
+let grandTotal = 0;
+
 // Contructor function for collecting store information
 function Stores(city, min, max, avg) {
   this.city = city;
@@ -22,6 +26,7 @@ function Stores(city, min, max, avg) {
   this.sales = 0;
   this.total = 0;
   this.array = [];
+  allStoresArr.push(this);
 
 }
 
@@ -59,17 +64,11 @@ Stores.prototype.render = function () {
     tr.appendChild(td);
   }
 
-  // for (let i = 0; i < hours.length; i++) {
-  //   this.getSales();
-  //   this.total = this.total + this.sales;
-  //   td = document.createElement('td');
-  //   td.textContent = `${this.sales}`;
-  //   tr.appendChild(td);
-  // }
   td = document.createElement('td');
   td.textContent = this.total;
   tr.appendChild(td);
 };
+
 
 //Renders the header inforamtion with the hours array to
 function renderHeader() {
@@ -104,7 +103,29 @@ function renderFooter() {
   td.textContent = 'Totals';
   tfoot.appendChild(td);
 
+  for (let i =0; i < hours.length; i++){
+    td = document.createElement('td');
+    td.textContent = parseInt(`${+hourlyTotalsArr[i]}`);
+    tr.appendChild(td);
+  }
+
 }
+
+function getHourlyTotals () {
+
+  for (let i = 0; i < hours.length; i++){
+    let total = 0;
+    for (let j =0; j < allStoresArr.length; j++){
+      total += allStoresArr[j].array[i];
+    }
+
+    hourlyTotalsArr.push(total);
+    grandTotal += total;
+  }
+  console.log(hourlyTotalsArr);
+  hourlyTotalsArr.push(grandTotal);
+}
+
 
 //creating a new objects for each store with their values for consturctor function
 let seattle = new Stores('Seattle', 23, 65, 6.3);
@@ -121,6 +142,11 @@ dubai.render();
 paris.render();
 lima.render();
 renderFooter();
+getHourlyTotals();
+
+
+
+
 
 
 //For refernce of the vales for each store
