@@ -111,15 +111,13 @@ Create a high-fidelity wireframe of what you want your page to look like.
 
 #### Links and Resources: N/A
 
-#### submission PR:
+#### submission PR
 
-### Reflections and Comments:
+### Reflections and Comments
 
 At first I thought this was going to be fast, but after realizing elements had to be added to the sales.html, it got nuanced very quickly. There were a lot of small steps that needed to be accomplished to complete each task. It took me the whole lab for me to complete the requirements. Speaking out loud when you are stuck, really does work so I need to find a rubber ducky to talk to whole I typing and thinking.
 
-
 ## LAB - 07 Add a constructor function to the cookie stand project
-
 
 ## Pat's Salmon Cookies
 
@@ -131,20 +129,17 @@ Replace the lists of your data for each store and build a single table of data i
 
 Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a “Daily Location Total”.
 
-
 ### Author: Joshua McCluskey
 
 ### Links and Resources: N/A
 
-### submission PR:
+### submission PR
 
-
-### Reflections and Comments:
+### Reflections and Comments
 
 I felt like this was the toughest lab to figure out out of all the labs so far in 201. I hit several points where my brain had hit its point, and I kept trying to push through. I now appreciate any dynamic table that I may see from here on out. I thought that it would take as long as the build out in the class demonstration. Then I quickly realized if I was going to use the functions that I had already built that it would take longer to modify the code to work. I learned an invaluable amount during this exercise. This assignment took me the whole lab.
 
 ## LAB - 08 CSS
-
 
 ## Pat's Salmon Cookies
 
@@ -172,15 +167,48 @@ Make two additional pages:
 Mock up an order form that would be public facing (store.html) so that visitors to the website can order salmon cookies and swag. That form would need to receive all of the things you’d expect on an order form: name, address, payment info, products to order, quantities, special instructions, and so on.
 A second ‘private’ page (order-processing.html) that shows a list of pending orders and the individual order details. The business owner can then process the orders by clicking a button next to the order that then moves that list item to a ‘Filled Orders’ list at the bottom of the page.
 
-
 ### Author: Joshua McCluskey
 
-### Links and Resources:
+### Links and Resources
 
 [Google Fonts](<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bungee+Outline&display=swap" rel="stylesheet">)
 
-### submission PR:
+### submission PR
 
 Reflections and Comments:
 
 This lab went very fast considering the amount of work that needed to be done. It helped to have the wireframe ready to use from the first part of the lab. Then it was pretty much modifying the page to fit the website. It took some adjustments to stop overlapping and then it all came togeter working section by section. Overall, it was a solid lab. A ton of time can be spent on styling, I need to catch myself in the future from spending too much time in the grand scheme of the course and other features of the website that require more time and mental resources.
+
+## LAB - 09 Forms
+
+## Pat's Salmon Cookies
+
+Today you will be adding a form to your existing cookie stand project so that you can add new locations to the table by simply inputting their information with the form.
+
+Create a new HTML form to accept the information for a new cookie stand. Be sure to utulize the <fieldset> tag to help you style it.
+
+Upon submission of the HTML form, create an event handler that creates a new instance of a cookie stand that appends to the table upon form submission.
+
+Use the constructor function as your guide to determine what input fields your form needs (hint: also consider what is passed in when creating instances!).
+
+If not complete from lab 7, write a stand-alone function to generate a footer row which will display the total number of cookies sold per hour for all locations. When a new store is added using your form, the totals in the footer row should update to include these new sales numbers.
+
+Anywhere you have repeated chunks of code, apply some DRY principles. Generally, once some chunk of code is appearing for a 3rd time or so, that’s when you want to consider refactoring.
+
+Validate your html through HTML5 validation.
+
+Confirm that your code is following the single responsibility rule. Each function should only do one thing, with the capability to break it out further as needed.
+
+
+
+### Author: Joshua McCluskey
+
+### Links and Resources
+
+[Google Fonts](<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bungee+Outline&display=swap" rel="stylesheet">)
+
+### submission PR
+
+Reflections and Comments:
+
+This lab went well I'm really starting to feel thing coming all togehter and cementing in my head. Troubleshooting is beginning to be more clear. I'm starting to break things down into smaller details which I haven't done before to troubleshoot and debug. I thought this lab went well. THe CSS was actually difficult, messing around with measurements. I have to spend more time to understand setting up some kind of break point so the page has some consitencacy. Overall, it was a lab that I learned a lot from. I think building forms and connecting them to JS is my new favorite thing to do.
