@@ -16,6 +16,7 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 let allStoresArr = [];
 let hourlyTotalsArr = [];
 let grandTotal = 0;
+let tfoot = document.createElement('tfoot');
 
 // Contructor function for collecting store information
 function Stores(city, min, max, avg) {
@@ -97,7 +98,44 @@ Stores.prototype.render = function () {
   tr.appendChild(td);
 };
 
+function renderFooter() {
+  getHourlyTotals();
+  let table = document.getElementById('cookieSales');
+  table.appendChild(tfoot);
+  let tr = document.createElement('tr');
+  tfoot.appendChild(tr);
+  let td = document.createElement('td');
+  td.textContent = 'Totals';
+  tr.appendChild(td);
 
+  for (let i = 0; i < hours.length; i++) {
+    td = document.createElement('td');
+    td.textContent = hourlyTotalsArr[i];
+    tr.appendChild(td);
+  }
+
+  td = document.createElement('td');
+  td.textContent = grandTotal;
+  tr.appendChild(td);
+
+
+}
+
+function getHourlyTotals() {
+
+  for (let i = 0; i < hours.length; i++) {
+    let total = 0;
+    for (let j = 0; j < allStoresArr.length; j++) {
+      total += allStoresArr[j].array[i];
+    }
+
+    hourlyTotalsArr.push(total);
+    grandTotal += total;
+  }
+  console.log(hourlyTotalsArr);
+}
+
+// hourlyTotalsArr.push(grandTotal);
 //creating a new objects for each store with their values for consturctor function
 let seattle = new Stores('Seattle', 23, 65, 6.3);
 let tokyo = new Stores('Tokyo', 3, 24, 1.2);
@@ -115,6 +153,8 @@ tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+renderFooter();
+
 
 
 // Form functions
@@ -140,6 +180,10 @@ function handleSubmit(event) {
 
   newStore.getSales();
   newStore.render();
+  hourlyTotalsArr = [];
+  grandTotal = 0;
+  tfoot.innerHTML = '';
+  renderFooter();
 
 }
 
@@ -154,41 +198,9 @@ salesForm.addEventListener('submit', handleSubmit);
 salesForm.reset();
 
 
-function renderFooter() {
-  let table = document.getElementById('cookieSales');
-  let tfoot = document.createElement('tfoot')
-  table.appendChild(tfoot);
-  let tr = document.createElement('tr');
-  tfoot.appendChild(tr);
-  let td = document.createElement('td');
-  td.textContent = 'Totals';
-  tr.appendChild(td);
 
-  for (let i = 0; i < hours.length; i++) {
-    td = document.createElement('td');
-    td.textContent = parseInt(`${hourlyTotalsArr[i]}`);
-    tr.appendChild(td);
-  }
 
-}
 
-function getHourlyTotals() {
-
-  for (let i = 0; i < hours.length; i++) {
-    let total = 0;
-    for (let j = 0; j < allStoresArr.length; j++) {
-      total += allStoresArr[j].array[i];
-    }
-
-    hourlyTotalsArr.push(total);
-    grandTotal += total;
-  }
-  console.log(hourlyTotalsArr);
-  hourlyTotalsArr.push(grandTotal);
-}
-
-renderFooter();
-getHourlyTotals();
 
 //For refernce of the vales for each store
 // function seattleRender() {
