@@ -203,7 +203,6 @@ salesForm.reset();
 
 
 //For refernce of the vales for each store
-// function seattleRender() {
 
 //   let seattle = {
 //     city: 'Seattle',

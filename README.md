@@ -212,3 +212,33 @@ Confirm that your code is following the single responsibility rule. Each functio
 Reflections and Comments:
 
 This lab went well I'm really starting to feel thing coming all togehter and cementing in my head. Troubleshooting is beginning to be more clear. I'm starting to break things down into smaller details which I haven't done before to troubleshoot and debug. I thought this lab went well. THe CSS was actually difficult, messing around with measurements. I have to spend more time to understand setting up some kind of break point so the page has some consitencacy. Overall, it was a lab that I learned a lot from. I think building forms and connecting them to JS is my new favorite thing to do.
+
+
+## LAB - 10b Finish the salmon cookie stand project
+
+## Pat's Salmon Cookies
+
+Finish up your Salmon Cookies project. Ensure that you meet all minimum functionality described in prior labs as well as succesfully implemented all of the requirements for the index.html file listed in Lab 06. Here they are, listed below:
+
+A custom Google font for highlights
+A specified standard sans-serif web font for data (such as Arial, Verdana, or Helvetica)
+A specified standard serif web font for text (such as Georgia, Times, etc.)
+Specified different font colors for all three font usages
+A background color for the default page background (make sure font colors have good contrast and are readable on this background)
+A different background color for elements such boxes and tables (so make sure the font colors contrast against this well, too!)
+Anything else you’d like to add related to style. But remember: simplicity, clarity, and consistency are good things in design.
+Be thoughtful about layout and overall organization of the page.
+Include all of the typical stuff that you’ll find on the home page of a business: locations, hours, phone number, email address, some text about how awesome the business is, etc. Be creative, and again, think about what is meaningful to a typical end user.
+
+### Author: Joshua McCluskey
+
+### Links and Resources
+
+[Google Fonts](<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bungee+Outline&display=swap" rel="stylesheet">)
+
+### submission PR
+
+Reflections and Comments:
+
+This project overall, was really challenging. It pushed me to my limits. When Ryan said this week is a right of passage for Code Fellows, I didn't know what we were getting into for the salmon cookie project. This week pushed me to my limits, and I've grown so much in such a short period of time. There's no turning back after getting through this week. It felt like a huge accomplishment. Especially since I've always been intimidated by numbers and math. Being thrown in the deep end where it's uncomfortable, I learned more skills, but also I learned how to be comfortable being uncomfortable.
+
